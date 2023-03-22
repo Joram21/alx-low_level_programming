@@ -1,22 +1,16 @@
 #include "main.h"
 /**
- * Description: prints the last digit of a number
- * @c: input number as an integer
- * Return: last digit value
+ * print_last_digit - Output the last number
+ * @n: Test case number
+ * Return: The last number
  */
 int print_last_digit(int n)
 {
-	int l; 
 
-	l = n % 10;
-	if (l < 0)
-	{
-		_putchar(-l + 48);
-		return(-l);
-	}
-	else
-	{
-		_putchar(l + 48);
-		return (l);
-	}
+	int num = n % 10;
+
+	if (num < 0)
+		num *= -1;
+	_putchar(num + '0');
+	return (num);
 }
