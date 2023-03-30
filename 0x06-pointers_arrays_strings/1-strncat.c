@@ -5,40 +5,21 @@
  * @dest: resulting string
  * @src: input string
  * @n: the most number of bytes used from src
- * Return: void
+ * Return: char
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	/**
-	 * Find the end of the dest string
-	 */
-	char *dest_end = dest;
+	int a, b;
 
-	while (*dest_end != '\0')
+	for (a = 0; dest[a] != '\0'; a++)
 	{
-		dest_end++;
+		continue;
 	}
-
-	/**
-	 * Append the src string to dest, up to n characters
-	 */
-
-	int i = 0;
+	for (b = 0; src[b] != '\0' && b < n; b++)
 	{
-		while (i < n && *src != '\0')
-		{
-		*dest_end = *src;
-		dest_end++;
-		src++;
-		i++;
-		}
+		dest[a + b] = src[b];
 	}
-
-	/*
-	 * Add a terminating null byte
-	 */
-	*dest_end = '\0';
-
+	dest[a + b] = '\0';
 	return (dest);
 }
