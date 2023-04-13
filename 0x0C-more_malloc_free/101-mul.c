@@ -65,7 +65,6 @@ int main(int argc, char *argv[])
 	int len1, len2, new_len, c, mod, num1, num2, *mul, d = 0;
 
 	str1 = argv[1], str2 = argv[2];
-
 	if (argc != 3 || !is_digit(str1) || !is_digit(str2))
 		errors();
 	len1 = _strlen(str1);
