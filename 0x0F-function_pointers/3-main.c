@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
 	o = *argv[2];
 
-	if ((o == '/' || o == '%') && arg2 == 0)
+	if ((o == '/' || o == '%') && j2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 
 	res = func(j1, j2);
 
-	printf("%d\n", result);
+	printf("%d\n", res);
 
 	return (0);
 }
